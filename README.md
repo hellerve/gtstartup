@@ -10,7 +10,9 @@ we call
 bash mk.sh
 ```
 
-and wait for 10 minutes or so while a development image is built.
+and wait for 10 minutes or so while a development image is built. it will
+be put in a directory named after the current date and time and be started
+automatically.
 
 if you need to setup `gt4gemstone` as well for Gemstone interoperability,
 use `--withgs`.
