@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 args=("$@")
 
@@ -14,7 +14,22 @@ function loadStFile() {
 DIR=`date +%Y-%m-%d-%H-%M`
 mkdir $DIR
 cd $DIR
-curl https://dl.feenk.com/scripts/mac.sh | bash
+
+case "$(uname -s)" in
+	Darwin)
+		curl https://dl.feenk.com/scripts/mac.sh | bash
+		;;
+	Linux)
+		curl https://dl.feenk.com/scripts/linux.sh | bash
+		;;
+	MINGW*|MSYS*|CYGWIN*)
+		wget https://dl.feenk.com/scripts/windows.ps1 -OutFile windows.ps1; ./windows.ps1
+		;;
+	*)
+		echo "Unknown system."
+		exit 1
+		;;
+esac
 
 cd glamoroustoolkit
 

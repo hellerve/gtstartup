@@ -27,12 +27,6 @@ all other options will be ignored.
 
 ## customization
 
-firstly, you will need to change the build script (`mk.sh`) for your system.
-i use macos, so i have to use: `curl https://dl.feenk.com/scripts/mac.sh | bash`
-in the script. you change the script to your os as described at the bottom
-of the [download page](https://gtoolkit.com/download/) of gtoolkit. this
-part should be straightforward and take 5 seconds.
-
 i have a few scripts that i run at startup to configure the image for my
 needs. you can add your own by pasting them in the `scripts` directory,
 but you will likely want to tweak what mine are doing.
