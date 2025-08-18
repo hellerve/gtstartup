@@ -46,7 +46,7 @@ stopgs() {
 	if [[ ${script_args[0]} == 'withgs' ]]; then
 		stopnetldi
 		stopstone -i gs64stone DataCurator swordfish
-	done
+	fi
 }
 
 trap 'stopgs' SIGINT

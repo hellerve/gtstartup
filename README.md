@@ -36,12 +36,13 @@ needs. you can add your own by pasting them in the `scripts` directory,
 but you will likely want to tweak what mine are doing.
 
 currently, i use:
-- `requirements.st`: pulls in the requirements i use (currently only `gt4dd`,
+- `01-requirements.st`: pulls in the requirements i use (currently only `gt4dd`,
   you probably need something else).
-- `git.st`: switches the git tool to use the cli git adapter.
-- `llm.st`: enables experimental llm features, enables ollama, and picks
+- `02-git.st`: switches the git tool to use the cli git adapter.
+- `03-llm.st`: enables experimental llm features, enables ollama, and picks
   a random llm backend as the default (because i need to test them all).
-- `pager`: enables the new tree-based pager.
+- `04-pager.st`: enables the new tree-based pager.
+- `05-lepiter.st`: loads all lepiter databases in repositories we loaded.
 
 take any and all of them at your leisure. they are mostly extremely simple.
 
