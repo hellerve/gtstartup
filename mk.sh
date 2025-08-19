@@ -11,7 +11,7 @@ function loadStFile() {
     "$GToolkitCLI" *.image st "$CUSTOMIZATION_FILE" --interactive --no-quit
 }
 
-DIR=`date +%Y-%m-%d-%H-%M`
+DIR="gt-`date +%Y-%m-%d-%H-%M`"
 mkdir $DIR
 cd $DIR
 
