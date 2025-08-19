@@ -37,7 +37,7 @@ for f in ../../scripts/*; do
 	loadStFile $f
 done
 
-if [[ $1 == '--withgs' ]]; then
+if [[ ${args[0]-none} == '--withgs' ]]; then
 	echo "Setting up gt4gemstone"
 
 	# this seems unsafe? it probably is! but gemstone requires it somehow,
@@ -58,7 +58,7 @@ echo "We are ready!"
 ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit
 
 stopgs() {
-	if [[ ${script_args[0]} == 'withgs' ]]; then
+	if [[ ${args[0]-default} == 'withgs' ]]; then
 		stopnetldi
 		stopstone -i gs64stone DataCurator swordfish
 	fi
