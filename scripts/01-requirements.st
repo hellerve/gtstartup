@@ -8,7 +8,13 @@ EpMonitor current disable.
 Metacello new
 	repository: 'github://hellerve/gt4dd:main/src';
 	baseline: 'Gt4Dd';
-	load
+	load.
+
+Metacello new
+	repository: 'github://hellerve/blog:master/src';
+	baseline: 'VhBlog';
+	load.
+#BaselineOfVhBlog asClass loadLepiter
 
 ] ensure: [ EpMonitor current enable ].
 
