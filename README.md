@@ -25,6 +25,11 @@ this will require superuser privileges.
 
 all other options will be ignored.
 
+Ubuntu needs 
+```
+sudo apt install libgl1-mesa-dev
+```
+
 ## customization
 
 i have a few scripts that i run at startup to configure the image for my
