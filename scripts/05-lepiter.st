@@ -1,4 +1,5 @@
 "Load all Lepiter databases from git repositories"
+| allLepiterDirs unloadedLepiterDirs |
 allLepiterDirs := IceRepository registry copy 
 	collect: [ :eachRepository | 
 	eachRepository repositoryDirectory ifNotNil: [ :aRepoDir | 
